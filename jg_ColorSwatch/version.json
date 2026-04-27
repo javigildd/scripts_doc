@@ -1,6 +1,6 @@
 {
-  "version": "0.92",
+  "version": "0.93",
   "released": "2026-04-27",
   "url": "https://github.com/javigildd/scripts_doc/tree/main/jg_ColorSwatch",
-  "notes": "The .jsx itself is not hosted in this public repo. Updates are delivered through your LemonSqueezy account; this manifest is consumed by the in-script update check."
+  "notes": "Bumped to 0.93 to validate the in-script update banner end-to-end. The .jsx itself is delivered through your LemonSqueezy account."
 }
