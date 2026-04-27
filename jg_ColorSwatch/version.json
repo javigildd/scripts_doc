@@ -2,6 +2,5 @@
   "version": "0.92",
   "released": "2026-04-27",
   "url": "https://github.com/javigildd/scripts_doc/tree/main/jg_ColorSwatch",
-  "download": "https://raw.githubusercontent.com/javigildd/scripts_doc/main/jg_ColorSwatch/jg_ColorSwatch.jsx",
-  "notes": "Toolbar version label restored; Settings menu has an explicit Close button."
+  "notes": "The .jsx itself is not hosted in this public repo. Updates are delivered through your LemonSqueezy account; this manifest is consumed by the in-script update check."
 }
