@@ -1,5 +1,5 @@
 {
-  "version": "0.94",
+  "version": "0.95",
   "released": "2026-04-27",
   "url": "https://github.com/javigildd/scripts_doc/tree/main/jg_ColorSwatch",
   "notes": "Bumped to 0.93 to validate the in-script update banner end-to-end. The .jsx itself is delivered through your LemonSqueezy account."
