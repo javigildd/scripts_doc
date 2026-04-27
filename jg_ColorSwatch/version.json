@@ -1,0 +1,7 @@
+{
+  "version": "0.9",
+  "released": "2026-04-27",
+  "url": "https://github.com/javigildd/scripts_doc/tree/main/jg_ColorSwatch",
+  "download": "https://raw.githubusercontent.com/javigildd/scripts_doc/main/jg_ColorSwatch/jg_ColorSwatch.jsx",
+  "notes": "Pre-release versioning. Update-check + banner + Settings → Check for updates. Filename normalised to jg_ColorSwatch.jsx."
+}
