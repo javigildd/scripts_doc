@@ -1,6 +1,9 @@
 // jg_ColorSwatch — color swatch panel for After Effects
 //
 // Changelog
+//   0.91 Restored the small "vX.YZ" label in the toolbar (right of ⚙) so the
+//        installed version is visible at a glance again. Settings menu now
+//        has an explicit "Close" button (Esc still works too).
 //   0.9  Pre-release versioning kicks in (the dev cycle so far counted as
 //        4.0–4.3). Adds an update-check that compares SCRIPT_VERSION with
 //        the manifest published in
@@ -29,7 +32,7 @@
     // CONSTANTS & CONFIGURATION
     // ============================================================
     var SCRIPT_NAME      = "JG_ColorSwatch";   // unchanged → preserves v3 settings
-    var SCRIPT_VERSION   = "0.9";
+    var SCRIPT_VERSION   = "0.91";
     var SAVE_KEY         = "UserColorGroups";
     var LAST_GROUP_KEY   = "LastGroup";
     var LICENSE_KEY_S    = "License";
@@ -1386,6 +1389,12 @@
         settingsBtn.size    = [22, 20];
         settingsBtn.helpTip = "Settings · Import / Export / Help / License";
 
+        var versionTxt = rightBtns.add("statictext", undefined, "v" + SCRIPT_VERSION);
+        versionTxt.graphics.font = ScriptUI.newFont("Arial", "REGULAR", 7);
+        versionTxt.graphics.foregroundColor = versionTxt.graphics.newPen(
+            versionTxt.graphics.PenType.SOLID_COLOR, [0.5, 0.5, 0.5], 1);
+        versionTxt.helpTip = "Installed version";
+
         // View buttons — active button shown with brackets
         var viewButtons = {};
         for (var i = 0; i < VIEW_MODES.length; i++) {
@@ -1641,6 +1650,11 @@
             makeItem("Check for updates", manualCheckForUpdates);
             makeItem("Help",              showHelpDialog);
             makeItem("License",           showLicenseInfoDialog);
+
+            // Trailing Close so the menu has an explicit way out (Esc still works).
+            var closeBtn = menu.add("button", undefined, "Close", { name: "cancel" });
+            closeBtn.alignment = ["right", "center"];
+            closeBtn.onClick   = function() { menu.close(); };
 
             menu.show();
         };
